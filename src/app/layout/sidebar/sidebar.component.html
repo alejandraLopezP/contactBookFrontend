@@ -1,0 +1,56 @@
+<mat-sidenav-container class="app-sidenav-container">
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [opened]="!isScreenSmall"
+      [mode]="isScreenSmall ? 'over' : 'side'">
+      <mat-toolbar color="primary">
+        Contacts
+      </mat-toolbar>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+            <a matLine routerLink="contacts">
+                <mat-icon>perm_identity</mat-icon>
+                Contacts
+            </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a matLine routerLink="contact-favorites">
+                <mat-icon>stars</mat-icon>
+            Favorites contacts
+            </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a matLine routerLink="last-contacts">
+                <mat-icon>more_time</mat-icon>
+            Last contacts
+            </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a matLine [routerLink]="['contacts', 0, 'form']">
+                <mat-icon>how_to_reg</mat-icon>
+            Add Contact
+            </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a matLine routerLink="documentation">
+                <mat-icon>menu_book</mat-icon>
+            Documentation
+            </a>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <a matLine routerLink="credit">
+                <mat-icon>support_agent</mat-icon>
+            Credit
+            </a>
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+  
+    <div class="app-sidenav-content">
+      <app-topbar (toggleSidebar)="sidenav.toggle()"></app-topbar>
+      <div class="wrapper">
+        <app-main-content></app-main-content>
+      </div>
+    </div>
+  
+  </mat-sidenav-container>
+  
+  

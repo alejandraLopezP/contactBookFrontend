@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "contact-book-front"
+  "defaultProject": "contact-book-front",
+  "cli": {
+    "analytics": false
+  }
 }
