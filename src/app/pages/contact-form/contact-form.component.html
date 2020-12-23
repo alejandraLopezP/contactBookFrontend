@@ -1,1 +1,27 @@
-<p>contact-form works!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Phone">
+    </mat-form-field>
+    <mat-checkbox class="example-margin">Favorite</mat-checkbox>
+</form>
+
+<div>
+    <mat-toolbar>
+      <!-- Display files names -->
+      <input matInput [(ngModel)]="fileAttr" readonly name="photo" />
+
+      <!-- Browse Button -->
+      <button mat-flat-button color="primary">
+        Browse File
+      </button>
+    </mat-toolbar>
+  </div>

@@ -18,6 +18,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
 import { DocumentationComponent } from './pages/documentation/documentation.component';
 import { CreditComponent } from './pages/credit/credit.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
