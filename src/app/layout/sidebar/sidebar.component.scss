@@ -48,3 +48,23 @@ $iconWidth: 56px;
 .title-page{
   float: right !important;
 }
+
+.item-list{
+    color: black;
+    text-decoration: none;
+
+    span {
+      vertical-align: super;
+      padding-left: 5px;
+      font-weight: 500;
+    }
+}
+
+.item-list:hover {
+  background-color: #3f51b5e1;
+}
+
+.route-active {
+  background-color:  #3f51b5;
+  color: #ffffff;
+}

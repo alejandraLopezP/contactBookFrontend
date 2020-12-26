@@ -5,42 +5,30 @@
         Contacts
       </mat-toolbar>
       <mat-list role="list">
-        <mat-list-item role="listitem">
-            <a matLine routerLink="contacts">
-                <mat-icon>perm_identity</mat-icon>
-                Contacts
-            </a>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-            <a matLine routerLink="contact-favorites">
-                <mat-icon>stars</mat-icon>
-            Favorites contacts
-            </a>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-            <a matLine routerLink="last-contacts">
-                <mat-icon>more_time</mat-icon>
-            Last contacts
-            </a>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-            <a matLine [routerLink]="['contacts', 0, 'form']">
-                <mat-icon>how_to_reg</mat-icon>
-            Add Contact
-            </a>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-            <a matLine routerLink="documentation">
-                <mat-icon>menu_book</mat-icon>
-            Documentation
-            </a>
-        </mat-list-item>
-        <mat-list-item role="listitem">
-            <a matLine routerLink="credit">
-                <mat-icon>support_agent</mat-icon>
-            Credit
-            </a>
-        </mat-list-item>
+        <a mat-list-item role="listitem" class="item-list" routerLink="contacts" routerLinkActive="route-active">
+            <mat-icon>perm_identity</mat-icon>
+            <span>Contacts</span>
+        </a>
+        <a mat-list-item role="listitem" class="item-list" routerLink="contact-favorites" routerLinkActive="route-active">
+            <mat-icon>stars</mat-icon>
+            <span>Favorites contacts</span> 
+        </a>
+        <a mat-list-item role="listitem" class="item-list" routerLink="last-contacts" routerLinkActive="route-active">
+            <mat-icon>more_time</mat-icon>
+            <span>Last contacts</span>
+        </a>
+        <a mat-list-item role="listitem" class="item-list" [routerLink]="['contacts', 0, 'form']" routerLinkActive="route-active">
+            <mat-icon>how_to_reg</mat-icon>
+            <span>Add Contact</span>
+        </a>
+        <a mat-list-item role="listitem" class="item-list" routerLink="documentation" routerLinkActive="route-active">
+            <mat-icon>menu_book</mat-icon>
+            <span>Documentation</span>
+        </a>
+        <a mat-list-item role="listitem" class="item-list" routerLink="credit" routerLinkActive="route-active">
+            <mat-icon>support_agent</mat-icon>
+            <span>Credit</span>
+        </a>
       </mat-list>
     </mat-sidenav>
   

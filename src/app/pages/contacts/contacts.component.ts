@@ -11,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'photo', 'name', 'email', 'phone_number','action']
+  displayedColumns: string[] = ['id', 'photo', 'name', 'email', 'phone_number','favorite','action']
   dataSource: MatTableDataSource<IContact> = new MatTableDataSource<IContact>([]);
   urlServer: string = 'http://127.0.0.1:3333'
 
@@ -41,6 +41,15 @@ export class ContactsComponent implements OnInit {
   applyFilter(event: Event): void {
     const dataFilter = (event.target as HTMLInputElement).value
     this.dataSource.filter = dataFilter
+  }
+
+  delete(id: string): void {
+    this.dataService.delete("http://127.0.0.1:3333/contacts/"+id)
+      .subscribe(
+        (data) => {
+          this.read()
+        }
+      )
   }
 
 }

@@ -18,7 +18,7 @@ import { ContactDetailsComponent } from './pages/contact-details/contact-details
 import { DocumentationComponent } from './pages/documentation/documentation.component';
 import { CreditComponent } from './pages/credit/credit.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FlexLayoutModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
