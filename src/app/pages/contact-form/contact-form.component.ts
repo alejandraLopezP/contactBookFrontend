@@ -54,6 +54,15 @@ export class ContactFormComponent implements OnInit {
     }
   }
 
+  onFileChange(event: any): void {
+    let reader = new FileReader()
+    let file = event.target.files[0];
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.form.get('photo')?.setValue(reader.result)
+    }
+  }
+
   save(): void {
     if(!this.form.valid) {
       this._snackBar.open("Validator Error", "Ok", {
@@ -61,8 +70,8 @@ export class ContactFormComponent implements OnInit {
       });
       return;
     }
-
-    const data = this.form.value;
+    const data = this.form.value
+    console.log(data)
     if(this.edit){
       this.dataService.put("http://127.0.0.1:3333/contacts/"+this.id, data)
         .subscribe(

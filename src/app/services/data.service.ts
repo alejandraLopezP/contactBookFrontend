@@ -7,8 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  headers: HttpHeaders = new HttpHeaders(
+	headers: HttpHeaders = new HttpHeaders(
 		{'Content-Type': 'application/json'}
+	)
+
+	headers2: HttpHeaders = new HttpHeaders(
+		{'Content-Type': 'multipart/form-data'}
 	)
 
 	constructor(private http: HttpClient) {}
@@ -19,6 +23,11 @@ export class DataService {
 
 	post(url: string, data: any): Observable<any> {
 		return this.http.post(url, data, {headers: this.headers})
+	}
+
+	postMultipart(url: string, data: any): Observable<any> {
+		console.log(data)
+		return this.http.post(url, data, {headers: this.headers2})
 	}
 
 	put(url: string, data: any): Observable<any> {

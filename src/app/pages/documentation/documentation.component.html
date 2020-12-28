@@ -1,1 +1,97 @@
-<p>documentation works!</p>
+<mat-card>
+  <h2>The programs used in this project are detailed below</h2>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu">
+          ANGULAR
+        </mat-panel-title>
+        <mat-panel-description>
+          <a href="https://angular.io/guide/router">https://angular.io/guide/router</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Angular is an application design framework and development platform for creating efficient and sophisticated
+        single-page apps.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title  class="title-menu">
+          ANGULAR MATERIAL
+        </mat-panel-title>
+        <mat-panel-description>
+          <a href="https://angular.io/guide/router">https://angular.io/guide/router</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu">
+          ADONIS JS
+        </mat-panel-title>
+        <mat-panel-description>
+          <a
+            href="https://preview.adonisjs.com/blog/introducing-adonisjs-v5/">https://preview.adonisjs.com/blog/introducing-adonisjs-v5/</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>AdonisJS, now has baked-in support for Typescript. In fact, this is one of the biggest reasons for such a long
+        wait. The core of the framework and all the surrounding packages are re-written in Typescript.<br>
+
+        When we say that AdonisJS supports Typescript, we mean it. It is not just about adding few types here and there
+        to certain API's, we make sure that every corner of your app has proper support for type checking. Below are
+        some of the examples of same.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu">
+          MATERIAL DESIGN
+        </mat-panel-title>
+        <mat-panel-description>
+          <a href="https://material.io/design">https://material.io/design</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu">
+          PLURALSIGHT
+        </mat-panel-title>
+        <mat-panel-description>
+          <a
+            href="https://app.pluralsight.com/library/courses/angular-material/table-of-contents">https://app.pluralsight.com/library/courses/angular-material/table-of-contents</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p><b>Course by: Ajden Towfeek</b><br>
+        This course will teach you the fundamentals needed to get started with development and constructing great
+        looking, responsive websites with Angular Material leveraging Material Design.
+      </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-card-actions>
+    <button mat-button color="primary" [routerLink]="['/','contacts']">
+      <mat-icon aria-hidden="false">keyboard_arrow_left</mat-icon>
+      Back
+    </button>
+  </mat-card-actions>
+</mat-card>

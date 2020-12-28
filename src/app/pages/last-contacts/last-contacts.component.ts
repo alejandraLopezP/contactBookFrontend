@@ -11,7 +11,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./last-contacts.component.scss']
 })
 export class LastContactsComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'photo', 'name', 'email', 'phone_number','action']
+  displayedColumns: string[] = ['id', 'photo', 'name', 'email', 'phone_number','favorite','action']
   dataSource: MatTableDataSource<IContact> = new MatTableDataSource<IContact>([]);
   urlServer: string = 'http://127.0.0.1:3333'
 

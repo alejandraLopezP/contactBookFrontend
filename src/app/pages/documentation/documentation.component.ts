@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./documentation.component.scss']
 })
 export class DocumentationComponent implements OnInit {
-
+  panelOpenState: boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
