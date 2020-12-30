@@ -15,6 +15,9 @@
     <div class="example-full-width">
       <mat-checkbox class="example-margin" formControlName="favorite">Favorite</mat-checkbox>
     </div>
+    <div *ngIf="imgUrl.length > 0">
+      <img [src]="imgUrl" class="img-loader" alt="" srcset="">
+    </div>
     <mat-form-field>
       <ngx-mat-file-input formControlName="photo" placeholder="Picture" (change)="onFileChange($event)"></ngx-mat-file-input>
       <mat-icon matSuffix>folder</mat-icon>

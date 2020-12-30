@@ -25,7 +25,7 @@ export class ContactDetailsComponent implements OnInit {
         .subscribe(
           (data: IContact) => {
             this.contact = data
-            this.urlImg = this.contact.photo === '' 
+            this.urlImg = this.contact.photo === '' || this.contact.photo == null 
               ? 'assets/img/user.png'
               : this.urlServer + this.contact.photo
           },(err: any) => {

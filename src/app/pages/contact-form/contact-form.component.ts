@@ -15,6 +15,7 @@ export class ContactFormComponent implements OnInit {
   form!: FormGroup;
   edit: boolean = false;
   id: any = "0";
+  imgUrl: any = ""
 
   constructor(private fb: FormBuilder,
     private dataService: DataService,
@@ -28,6 +29,7 @@ export class ContactFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone_number: ['', [Validators.required]],
       photo: '',
+      photoName: '',
       favorite: false
     })
 
@@ -42,8 +44,11 @@ export class ContactFormComponent implements OnInit {
               email: data.email,
               phone_number: data.phone_number,
               photo: data.photo,
+              photoName: '',
               favorite: data.favorite,
             })
+
+            this.imgUrl = "http://127.0.0.1:3333"+data.photo
           },(err: any) => {
             console.log(err);
             this._snackBar.open("Server error, ", "Ok", {
@@ -56,10 +61,13 @@ export class ContactFormComponent implements OnInit {
 
   onFileChange(event: any): void {
     let reader = new FileReader()
-    let file = event.target.files[0];
+    let file = event.target.files[0]
+    console.log(file)
+    this.form.get('photoName')?.setValue(file.name)
     reader.readAsDataURL(file);
     reader.onload = () => {
       this.form.get('photo')?.setValue(reader.result)
+      this.imgUrl = reader.result?.toString()
     }
   }
 

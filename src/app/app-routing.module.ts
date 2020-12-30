@@ -19,6 +19,9 @@ const routes: Routes = [
     path: 'contacts/:id/form', component: ContactFormComponent
   },
   {
+    path: 'form-contact/:id', component: ContactFormComponent
+  },
+  {
     path: 'contact-favorites', component: ContactFavoritesComponent
   },
   {

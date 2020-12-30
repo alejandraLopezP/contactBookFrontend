@@ -43,4 +43,13 @@ export class ContactFavoritesComponent implements OnInit {
     this.dataSource.filter = dataFilter
   }
 
+  delete(id: string): void {
+    this.dataService.delete("http://127.0.0.1:3333/contacts/"+id)
+      .subscribe(
+        (data) => {
+          this.read()
+        }
+      )
+  }
+
 }

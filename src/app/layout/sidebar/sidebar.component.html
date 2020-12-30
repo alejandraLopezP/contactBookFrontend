@@ -2,7 +2,8 @@
     <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [opened]="!isScreenSmall"
       [mode]="isScreenSmall ? 'over' : 'side'">
       <mat-toolbar color="primary">
-        Contacts
+        <mat-icon>assignment_ind</mat-icon>
+        <span>BOOK Contacts</span>
       </mat-toolbar>
       <mat-list role="list">
         <a mat-list-item role="listitem" class="item-list" routerLink="contacts" routerLinkActive="route-active">
@@ -17,7 +18,7 @@
             <mat-icon>more_time</mat-icon>
             <span>Last contacts</span>
         </a>
-        <a mat-list-item role="listitem" class="item-list" [routerLink]="['contacts', 0, 'form']" routerLinkActive="route-active">
+        <a mat-list-item role="listitem" class="item-list" [routerLink]="['form-contact', 0]" routerLinkActive="route-active">
             <mat-icon>how_to_reg</mat-icon>
             <span>Add Contact</span>
         </a>
