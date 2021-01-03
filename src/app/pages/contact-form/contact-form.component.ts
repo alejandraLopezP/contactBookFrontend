@@ -88,7 +88,7 @@ export class ContactFormComponent implements OnInit {
           },
           (err) => {
             console.log(err);
-            this._snackBar.open("Server error, ", "Ok", {
+            this._snackBar.open("Server error", "Ok", {
               duration: 2000,
             });
           }
@@ -101,7 +101,7 @@ export class ContactFormComponent implements OnInit {
           },
           (err) => {
             console.log(err);
-            this._snackBar.open("Server error, ", "Ok", {
+            this._snackBar.open("Server error", "Ok", {
               duration: 2000,
             });
           }

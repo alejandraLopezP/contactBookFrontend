@@ -3,6 +3,23 @@
   <mat-accordion>
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu"><b>
+          How run backend and frontend from terminal:
+        </b></mat-panel-title>
+        
+      </mat-expansion-panel-header>
+      <p>Backend Adonis: node ace serve --watch + enter</p><br>
+      <p>localhost:3333</p><br>
+      <p>Frontend Angular: npm start + enter</p><br>
+      <p>localhost:4200</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
         <mat-panel-title class="title-menu">
           ANGULAR
         </mat-panel-title>
@@ -24,10 +41,9 @@
           ANGULAR MATERIAL
         </mat-panel-title>
         <mat-panel-description>
-          <a href="https://angular.io/guide/router">https://angular.io/guide/router</a>
+          <a href="https://material.angular.io/">https://material.angular.io/</a>
         </mat-panel-description>
       </mat-expansion-panel-header>
-
     </mat-expansion-panel>
     <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     </mat-expansion-panel>
@@ -62,6 +78,21 @@
         </mat-panel-title>
         <mat-panel-description>
           <a href="https://material.io/design">https://material.io/design</a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="title-menu">
+          INSOMNIA
+        </mat-panel-title>
+        <mat-panel-description>
+          <a href="https://insomnia.rest/">https://insomnia.rest/</a>
         </mat-panel-description>
       </mat-expansion-panel-header>
 
